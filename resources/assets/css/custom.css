@@ -1,0 +1,5 @@
+.show-single-movie{
+  max-height: 450px;
+  overflow-y: auto;
+  margin-bottom: 25px;
+}
