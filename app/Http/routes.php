@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('movies', function () {
-    return view('movie.index');
+Route::group(['as' =>'movies', 'prefix' => 'movies'], function(){
+    Route::get('/', 'MoviesController@index');
+    Route::post('/', 'MoviesController@index');
 });
