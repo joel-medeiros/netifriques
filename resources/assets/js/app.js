@@ -1,6 +1,8 @@
-window.$ = window.jQuery = require('jquery')
+window.$ = window.jQuery = require('jquery');
 require('bootstrap-sass');
 
-$( document ).ready(function() {
-  console.log($.fn.tooltip.Constructor.VERSION);
+$(document).ready(function() {
+  $('button.advanced-search').on("click", function(){
+      $('div.advanced-search-filters').toggleClass('hidden');
+  })
 });
