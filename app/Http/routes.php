@@ -19,3 +19,7 @@ Route::group(['as' =>'movies', 'prefix' => 'movies'], function(){
     Route::get('/', 'MoviesController@index');
     Route::post('/', 'MoviesController@index');
 });
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
