@@ -30,9 +30,10 @@ Route::group(['middleware'=>'web'], function (){
 });
 
 
-Route::group(['prefix' => 'api/v1', 'middleware' => 'auth:api', 'throttle:5'], function () {
-    Route::post('/', 'PeopleController@index');
-    Route::post('/add/', 'PeopleController@create');
-    Route::post('/update/', 'PeopleController@update');
-    Route::post('/delete/', 'PeopleController@delete');
+Route::group(['prefix' => 'api/v1', 'middleware' => 'auth:api', 'throttle:10'], function () {
+    Route::get('/', 'PeopleController@index');
+    Route::get('/{id}', 'PeopleController@show');
+    Route::post('/add', 'PeopleController@store');
+    Route::put('/update/{id}', 'PeopleController@update');
+    Route::delete('/delete/{id}', 'PeopleController@destroy');
 });
