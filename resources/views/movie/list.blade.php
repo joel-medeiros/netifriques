@@ -1,6 +1,5 @@
-
+<div class="col-md-12">
 <!-- Three columns of text below the carousel -->
-<div class="row">
     @foreach($movies as $movie)
         <div class="col-lg-4 show-single-movie">
             <img class="img-circle" src="{{$movie['poster']}}" alt="{{$movie['show_title']}}" width="140" height="140">
@@ -19,4 +18,4 @@
             <p>Cast - {{$movie['show_cast']}}</p>
         </div><!-- /.col-lg-4 -->
     @endforeach
-</div><!-- /.row -->
+</div>

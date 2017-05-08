@@ -1,12 +1,13 @@
+
+
 @extends('layouts.master')
 
 @section('title', 'Movies')
 
 @section('content')
-    @include('movie.filter')
+            @include('movie.filter')
 
-    @if (! empty($movies))
-            @include('movie.list')
-    @endif
-
+            @if (! empty($movies))
+                @include('movie.list')
+            @endif
 @endsection
