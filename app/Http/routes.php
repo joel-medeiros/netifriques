@@ -29,11 +29,21 @@ Route::group(['middleware'=>'web'], function (){
 
 });
 
-
+// Api Group Routes
 Route::group(['prefix' => 'api/v1', 'middleware' => 'auth:api', 'throttle:10'], function () {
+
+    // List all people
     Route::get('/', 'PeopleController@index');
+
+    // Show a person by id
     Route::get('/{id}', 'PeopleController@show');
+
+    // Add a new person
     Route::post('/add', 'PeopleController@store');
+
+    // Update a person by id
     Route::put('/update/{id}', 'PeopleController@update');
+
+    // Delete a person by Id
     Route::delete('/delete/{id}', 'PeopleController@destroy');
 });

@@ -156,6 +156,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /**
+         * Api document generator
+         */
+        Mpociot\ApiDoc\ApiDocGeneratorServiceProvider::class,
+
     ],
 
     /*
